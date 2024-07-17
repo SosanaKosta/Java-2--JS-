@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+<script>
+
+
+function withdraw(person, amount) {
+    if (amount > person.balance) {
+        console.log("Withdrawal cannot be processed due to insufficient funds.");
+    } else {
+        person.balance -= amount;
+        console.log(`Withdrawal of $${amount} successful. New balance: $${person.balance}`);
+    }
+}
+
+const john = {
+    name: "John Doe",
+    balance: 1000
+};
+
+withdraw(john, 500);
+withdraw(john, 700);
+withdraw(john, 300);
+</script>
+</body>
+</html>
